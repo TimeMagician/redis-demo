@@ -1,0 +1,36 @@
+# Redis Setting，详见 RedisAutoConfiguration  RedisProperties 类，https://yq.aliyun.com/articles/551640
+spring.redis:
+  # Connection URL, e.g. redis://user:password@example.com:6379
+  # 非生产环境Redis请参考：http://wiki.lianjia.com/pages/viewpage.action?pageId=199491612
+  url: redis://111.229.52.72:6379
+  timeout: 6s # 连接或读取超时时长
+  clientName: redis-demo
+
+#  采用jedis/lettuce链接的方法
+#  @see： https://blog.csdn.net/zzhongcy/article/details/102584028;
+#  @see:  https://www.oodlestechnologies.com/blogs/Configure-Connection-Pooling-With-Redis-In-Spring-Boot/
+
+#  #采用jedis连接，spring 1.5默认
+#  jedis:
+#    pool:
+#      maxActive: 50  # 连接池最大连接数（使用负值表示没有限制）
+#      maxWait: 800ms # 连接池最大阻塞等待时间（使用负值表示没有限制）
+#      maxIdle: 50 # 连接池中的最大空闲连接，一个连接默认TTL为60秒
+#      minIdle: 5 # 连接池中的最小空闲连接
+
+#  #采用lettuce连接，spring 2.x默认
+#  lettuce:
+#    pool:
+#      max-active: 8
+#      max-idle: 8
+#      min-idle: 0
+
+#  #哨兵服务器，用于监控redis集群主从备份用 详见：https://segmentfault.com/a/1190000002680804
+#  sentinel:
+#    nodes: 172.13.37.84:26379,177.15.33.82:26379,172.46.36.82:26379,172.11.31.36:26379,172.14.76.57:26379
+#    master: master
+
+
+
+server:
+  port: 8038
