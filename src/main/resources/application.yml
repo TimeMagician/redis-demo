@@ -5,6 +5,7 @@ spring.redis:
   url: redis://111.229.52.72:6379
   timeout: 6s # 连接或读取超时时长
   clientName: redis-demo
+  database: 0 #默认存储的数据库编号0-15
 
 #  采用jedis/lettuce链接的方法
 #  @see： https://blog.csdn.net/zzhongcy/article/details/102584028;
