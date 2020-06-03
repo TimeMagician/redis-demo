@@ -1,8 +1,8 @@
 # Redis Setting，详见 RedisAutoConfiguration  RedisProperties 类，https://yq.aliyun.com/articles/551640
 spring.redis:
-  # Connection URL, e.g. redis://user:password@example.com:6379
+  # Connection URL, e.g. redis://user:password@example.com:6379 具体方法详细： https://www.jianshu.com/p/906ec650d521
   # 非生产环境Redis请参考：http://wiki.lianjia.com/pages/viewpage.action?pageId=199491612
-  url: redis://111.229.52.72:6379
+  url: redis://:redis_demo@111.229.52.72:6379
   timeout: 6s # 连接或读取超时时长
   clientName: redis-demo
   database: 0 #默认存储的数据库编号0-15
